@@ -10,4 +10,16 @@ class Home extends BaseController
             'title' => 'HOME'
         ]);
     }
+    public function kegiatan()
+    {
+        return view('pages/kegiatan', [
+            'title' => 'Kegiatan'
+        ]);
+    }
+    public function pengurus()
+    {
+        return view('pages/pengurus', [
+            'title' => 'Pengurus'
+        ]);
+    }
 }

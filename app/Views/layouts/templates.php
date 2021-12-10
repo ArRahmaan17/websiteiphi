@@ -14,20 +14,20 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="/img/logo.webp" width="100"></a>
+      <a class="navbar-brand" href="/"><img title="Logo IPHI Kabupaten Karangnayar" src="/img/logo.webp" width="100"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link fw-bold" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold " href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold " href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
           </li>
         </ul>
       </div>
@@ -50,7 +50,6 @@
           </div>
           <div class="m-2">
             <ul class="list-unstyled medium">
-              <li>Kontak personal</li>
               <li>089XXXXXXXXX</li>
               <li>089XXXXXXXXX</li>
               <li>089XXXXXXXXX</li>
@@ -64,13 +63,13 @@
           </div>
           <div class="sosialmedia nav-link">
             <ul class="list-unstyled medium  ">
-              <li><a class="text-decoration-none text-dark" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
+              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
             </ul>
             <ul class="list-unstyled medium">
-              <li><a class="text-decoration-none text-dark" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
+              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
             </ul>
             <ul class="list-unstyled medium">
-              <li><a class="text-decoration-none text-dark" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
+              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
             </ul>
           </div>
         </div>
@@ -80,7 +79,7 @@
           </div>
           <div class="Lokasi nav-link">
             <ul class="list-unstyled medium">
-              <li><i class="bi bi-geo-alt-fill text-dark">Jl. Lawu No.156, Bejen, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57716</i></li>
+              <li><i class="bi bi-geo-alt-fill text-light">Jl. Lawu No.156, Bejen, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57716</i></li>
             </ul>
           </div>
         </div>
