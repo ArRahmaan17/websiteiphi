@@ -2,7 +2,7 @@
 <?= $this->section('content'); ?>
 <div class="container-xxl mt-5">
   <div class="row">
-    <div class="g-col-12 text-center">
+    <div class="g-col-12 text-center text-light">
       <img src="img/ketua.webp" data-aos="zoom-in-down" data-aos-delay="500" class=" img rounded-circle" width="250">
       <p class="h1" data-aos="fade-right" data-aos-delay="550">H. Juliyatmono, MM</p>
       <p class="h5" data-aos="fade-right" data-aos-delay="600">Ketua IPHI Kabupaten KARANGANYAR</p>

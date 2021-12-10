@@ -14,31 +14,34 @@
     </div>
     <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
       <div class="card">
-        <img src="/img/default.webp" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
+        <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <a href="/admin/perbaruikegiatan" class="btn btn-light">UPDATE</a>
+          <a href="/admin/deletekegiatan" class="btn btn-danger">DELETE</a>
         </div>
       </div>
     </div>
     <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
       <div class="card">
-        <img src="/img/default.webp" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
+        <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <a href="/admin/perbaruikegiatan" class="btn btn-light">UPDATE</a>
+          <a href="/admin/deletekegiatan" class="btn btn-danger">DELETE</a>
         </div>
       </div>
     </div>
     <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
       <div class="card">
-        <img src="/img/default.webp" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
+        <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Special title treatment</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <a href="/admin/perbaruikegiatan" class="btn btn-light">UPDATE</a>
+          <a href="/admin/deletekegiatan" class="btn btn-danger">DELETE</a>
         </div>
       </div>
     </div>

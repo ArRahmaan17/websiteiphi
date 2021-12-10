@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title><?= $title ?> | IPHI KARANGANYAR</title>
 </head>
 
@@ -21,13 +22,13 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/kegiatan-kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
           </li>
         </ul>
       </div>
@@ -63,13 +64,10 @@
           </div>
           <div class="sosialmedia nav-link">
             <ul class="list-unstyled medium  ">
-              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
+              <li><a class="text-decoration-none fw-bold text-light" href="https://www.facebook.com/IPHIKabKaranganyar"><i class="bi bi-facebook">&nbsp;Facebook</i></a></li>
             </ul>
             <ul class="list-unstyled medium">
-              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
-            </ul>
-            <ul class="list-unstyled medium">
-              <li><a class="text-decoration-none fw-bold text-light" href="https://github.com/ArRahmaan17"><i class="bi bi-github">&nbsp;ArRahmaan17</i></a></li>
+              <li><a class="text-decoration-none fw-bold text-light" href="https://www.instagram.com/iphikabupatenkaranganyar/"><i class="bi bi-instagram">&nbsp;Instagram</i></a></li>
             </ul>
           </div>
         </div>
