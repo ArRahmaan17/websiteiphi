@@ -5,21 +5,21 @@
     <div class="col-xl-10 mb-5">
       <form autocomplete="off" action="" method="POST">
         <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Judul Kegiatan</label>
+          <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Judul Kegiatan</label>
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="inputEmail3">
+            <input type="text" class="form-control" name="judul" id="inputEmail3">
           </div>
         </div>
         <div class="row mb-3">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Foto Thumbnails</label>
+          <label for="inputPassword3" class="col-sm-2 col-form-label fw-bold">Foto Thumbnails</label>
           <div class="col-sm-12">
-            <input type="file" class="form-control" id="inputPassword3">
+            <input type="file" class="form-control" name="foto" id="inputPassword3">
           </div>
         </div>
         <div class="row mb-3">
-          <label for="isikegiatan" class="form-label">Isi Kegiatan</label>
+          <label for="isikegiatan" class="form-label fw-bold">Isi Kegiatan</label>
           <div class="col-sm-12">
-            <textarea class="form-control" id="isikegiatan"></textarea>
+            <textarea class="form-control" name="isi" id="isikegiatan"></textarea>
           </div>
         </div>
         <div class="d-grid gap-2">
