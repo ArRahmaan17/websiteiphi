@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Home extends BaseController
 {
-  public function kegiatan()
+  public function kegiatanbanyak()
   {
     return view('pages/admin/kegiatan', [
       'title' => 'Data Kegiatan'
@@ -29,6 +29,12 @@ class Home extends BaseController
   {
     return view('pages/admin/perbaruikegiatan', [
       'title' => 'Perbarui Kegiatan'
+    ]);
+  }
+  public function kegiatan()
+  {
+    return view('pages/admin/detailkegiatan', [
+      'title' => 'Kegiatan'
     ]);
   }
 }

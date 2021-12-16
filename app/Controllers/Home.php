@@ -10,7 +10,7 @@ class Home extends BaseController
             'title' => 'HOME'
         ]);
     }
-    public function kegiatan()
+    public function kegiatanbanyak()
     {
         return view('pages/kegiatan', [
             'title' => 'Kegiatan'
@@ -20,6 +20,13 @@ class Home extends BaseController
     {
         return view('pages/pengurus', [
             'title' => 'Pengurus'
+        ]);
+    }
+    public function kegiatan($slug)
+    {
+        return view('pages/detailkegiatan', [
+            'title' => 'Detail Kegiatan',
+            'slug' => $slug
         ]);
     }
 }
