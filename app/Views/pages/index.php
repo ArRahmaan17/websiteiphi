@@ -1,6 +1,6 @@
 <?= $this->extend('layouts/templates'); ?>
 <?= $this->section('content'); ?>
-<div class="container-xxl mt-5">
+<div class="container">
   <div class="row">
     <div class="g-col-12 text-center text-light">
       <img src="img/ketua.webp" data-aos="zoom-in-down" data-aos-delay="500" class=" img rounded-circle" width="250">
@@ -30,9 +30,9 @@
       <div class="card">
         <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <h5 class="card-title">Judul Postingan</h5>
+          <p class="card-text">Isi Postingan</p>
+          <a href="#" class="btn btn-light">Detail Judul</a>
         </div>
       </div>
     </div>
@@ -40,9 +40,9 @@
       <div class="card">
         <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <h5 class="card-title">Judul Postingan</h5>
+          <p class="card-text">Isi Postingan</p>
+          <a href="#" class="btn btn-light">Detail Judul</a>
         </div>
       </div>
     </div>
@@ -50,9 +50,9 @@
       <div class="card">
         <img src="/img/default.webp" class="card-img-top">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-light">Go somewhere</a>
+          <h5 class="card-title">Judul Postingan</h5>
+          <p class="card-text">Isi Postingan</p>
+          <a href="#" class="btn btn-light">Detail Judul</a>
         </div>
       </div>
     </div>

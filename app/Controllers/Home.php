@@ -12,8 +12,10 @@ class Home extends BaseController
     }
     public function kegiatanbanyak()
     {
+        $kegiatanModel = new \App\Models\KegiatanModel();
         return view('pages/kegiatan', [
-            'title' => 'Kegiatan'
+            'title' => 'Kegiatan',
+            'data' => $kegiatanModel->findAll()
         ]);
     }
     public function pengurus()
@@ -24,9 +26,10 @@ class Home extends BaseController
     }
     public function kegiatan($slug)
     {
+        $kegiatanModel = new \App\Models\KegiatanModel();
         return view('pages/detailkegiatan', [
             'title' => 'Detail Kegiatan',
-            'slug' => $slug
+            'data' => $kegiatanModel->first($slug)
         ]);
     }
 }
