@@ -5,8 +5,8 @@
   <div class="card">
     <img src="/img/<?= $data['foto'] ?>" class="img-fluid">
     <div class="card-body">
-      <p class="card-text">Diposting Oleh: <?= $data['penulis'] ?> </p>
-      <p class="card-text">Terakhir Diupdate: <?= $data['updated_at'] ?></p>
+      <p class="h3">Diposting Oleh: <?= $data['penulis'] ?> </p>
+      <p class="h5">Terakhir Diupdate: <?= $data['updated_at'] ?></p>
       <p class=" card-text"><?= $data['isi'] ?></p>
     </div>
   </div>
