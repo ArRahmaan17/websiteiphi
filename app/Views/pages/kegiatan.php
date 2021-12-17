@@ -4,10 +4,10 @@
   <!-- acara panti -->
   <div id="acara" class="row p-4">
     <div class="col-xl-12">
-      <p class="h1 text-light d-inline" data-aos="fade-up" data-aos-delay="100">Acara IPHI</p>
+      <p class="h1 text-light d-inline">Acara IPHI</p>
       <form action="" method="post">
-        <div class="input-group mb-3" data-aos="fade-up" data-aos-delay="100">
-          <input type="text" class="form-control" placeholder="Keyword Yang ingin di cari">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" name="keyword" placeholder="Keyword Yang ingin di cari">
           <button class="btn btn-secondary" type="button" id="button-addon2">Cari Keyword</button>
         </div>
       </form>

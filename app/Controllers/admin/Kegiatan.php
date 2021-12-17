@@ -5,18 +5,12 @@ namespace App\Controllers\admin;
 use App\Controllers\BaseController;
 
 
-class Home extends BaseController
+class Kegiatan extends BaseController
 {
-  public function kegiatanbanyak()
+  public function index()
   {
     return view('pages/admin/kegiatan', [
       'title' => 'Data Kegiatan'
-    ]);
-  }
-  public function pengurus()
-  {
-    return view('pages/admin/pengurus', [
-      'title' => 'Data Pengurus'
     ]);
   }
   public function buatkegiatan()

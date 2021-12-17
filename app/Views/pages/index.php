@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <div id="acara" class="row p-4">
+  <div id="acara" class="row p-4 mt-5">
     <p class="h1 text-light" data-aos="fade-down" data-aos-delay="100">Acara IPHI & Panti</p>
     <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
       <div class="card shadow">

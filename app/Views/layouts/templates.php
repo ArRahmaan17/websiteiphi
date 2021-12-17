@@ -25,7 +25,7 @@
             <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/kegiatan-kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
