@@ -15,6 +15,15 @@ class KegiatanModel extends Model
 
   protected $allowedFields = ['judul', 'isi', 'foto'];
 
+  public function getDataKegiatan($slug = false)
+  {
+    if ($slug == false) {
+      return $this->findAll();
+    } else {
+      return $this->where(['slug' => $slug])->first();
+    }
+  }
+
   public function search($keyword)
   {
     return $this->table('kegiatan')->like('judul', $keyword);

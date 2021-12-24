@@ -26,6 +26,7 @@ class KegiatanSeeder extends Seeder
       // // Simple Queries
       // $this->db->query("INSERT INTO blogs (judul, slug, postingan, excerpt, foto, penulis, created_at, updated_at) VALUES(:judul:, :slug:, :postingan:, :excerpt:, :foto:, :penulis:, :created_at:, :updated_at:)", $data);
       $faker = \Faker\Factory::create();
+      $faker->addProvider(new \Faker\Provider\Youtube($faker));
       $judul = $faker->words(3, true);
       $isi = $faker->text();
       $data = [
@@ -34,11 +35,12 @@ class KegiatanSeeder extends Seeder
         'isi' => $isi,
         'excerpt' => '',
         'foto' => 'default.webp',
+        'video' => $faker->youtubeEmbedUri(),
         'penulis' => $faker->name(),
         'created_at' => Time::createFromTimestamp($faker->unixTime()),
         'updated_at' => Time::now()
       ];
-      $this->db->query("INSERT INTO kegiatan(judul, slug, isi, excerpt, foto, penulis, created_at, updated_at) VALUES (:judul:, :slug:, :isi:, :excerpt:, :foto:, :penulis:, :created_at:, :updated_at:)", $data);
+      $this->db->query("INSERT INTO kegiatan(judul, slug, isi, excerpt, foto, video, penulis, created_at, updated_at) VALUES (:judul:, :slug:, :isi:, :excerpt:, :foto:, :video:, :penulis:, :created_at:, :updated_at:)", $data);
     }
   }
 }

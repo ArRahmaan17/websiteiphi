@@ -6,26 +6,29 @@ use App\Models\KegiatanModel;
 
 class Kegiatan extends BaseController
 {
+    public function __construct()
+    {
+        helper('text');
+        $this->Kegiatan = new KegiatanModel();
+    }
     public function index()
     {
-        $kegiatanModel = new \App\Models\KegiatanModel();
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
-            $kegiatan = $kegiatanModel->search($keyword);
+            $kegiatan = $this->Kegiatan->search($keyword);
         } else {
-            $kegiatan = $kegiatanModel;
+            $kegiatan = $this->Kegiatan;
         }
         return view('pages/kegiatan', [
             'title' => 'Kegiatan',
-            'data' => $kegiatan->findAll()
+            'data' => $kegiatan->getDataKegiatan()
         ]);
     }
     public function kegiatan($slug)
     {
-        $kegiatanModel = new \App\Models\KegiatanModel();
         return view('pages/detailkegiatan', [
             'title' => 'Detail Kegiatan',
-            'data' => $kegiatanModel->first($slug)
+            'data' => $this->Kegiatan->getDataKegiatan($slug)
         ]);
     }
 }

@@ -5,9 +5,9 @@
   <div class="card">
     <img src="/img/default.webp" class="img-fluid">
     <div class="card-body">
-      <p class="card-text d-inline-block">Diposting Oleh:</p>
-      <p class="card-text d-inline-block text-right">Terakhir Diupdate:</p>
-      <p class=" card-text">Isi</p>
+      <p class="h3 text-light">Diposting Oleh: <?= $data['penulis'] ?> </p>
+      <p class="h5 text-light">Terakhir Diupdate: <?= $data['updated_at'] ?></p>
+      <p class="card-text text-light"><?= $data['isi'] ?></p>
     </div>
     <a href="" class="btn btn-primary">UPDATE</a>
     <a href="" class="btn btn-danger">DELETE</a>

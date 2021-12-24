@@ -17,8 +17,8 @@
         <div class="card">
           <img src="/img/<?= $k['foto'] ?>" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
           <div class="card-body">
-            <h5 class="card-title"><?= $k['judul'] ?></h5>
-            <p class="card-text"><?= $k['excerpt'] ?></p>
+            <h5 class="card-title text-light"><?= $k['judul'] ?></h5>
+            <p class="card-text text-light"><?= $k['excerpt'] ?></p>
             <a href="/kegiatan/<?= $k['slug'] ?>" class="btn btn-light">Detail <?= $k['judul'] ?></a>
           </div>
         </div>
