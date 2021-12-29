@@ -8,7 +8,6 @@ class Kegiatan extends BaseController
 {
     public function __construct()
     {
-        helper('text');
         $this->Kegiatan = new KegiatanModel();
     }
     public function index()

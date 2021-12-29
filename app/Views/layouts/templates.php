@@ -20,17 +20,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
-          </li>
-        </ul>
+        <?php if (logged_in()) : ?>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="admin/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="admin/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="admin/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+            </li>
+          <?php else : ?>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+              </li>
+            </ul>
+          <?php endif ?>
       </div>
     </div>
   </nav>
