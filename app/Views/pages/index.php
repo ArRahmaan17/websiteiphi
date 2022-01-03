@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="g-col-12 text-center text-light">
-      <img src="img/ketua.webp" data-aos="zoom-in-down" data-aos-delay="500" class="img rounded-circle shadow" width="250">
+      <img src="/img/ketua.webp" data-aos="zoom-in-down" data-aos-delay="500" class="img rounded-circle shadow align-middle" width="250">
       <p class="h1" data-aos="fade-right" data-aos-delay="550">Drs. H. Juliyatmono, MM</p>
       <p class="h5" data-aos="fade-right" data-aos-delay="600">Ketua IPHI Kabupaten KARANGANYAR</p>
     </div>
@@ -40,7 +40,7 @@
     <?php endforeach ?>
     <hr>
     <!-- Gallery -->
-    <div id="gallery" class="row" data-aos="ease-in" data-aos-delay="500">
+    <div id="gallery" class="row justify-content-center" data-aos="ease-in" data-aos-delay="500">
       <p class="h3 text-center text-light">OUR GALLERY</p>
       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
         <img src="/img/gallery1.JPG" class="w-100 shadow rounded mb-4" alt="Boat on Calm Water" />

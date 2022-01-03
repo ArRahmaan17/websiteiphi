@@ -30,4 +30,15 @@ class Kegiatan extends BaseController
             'data' => $this->Kegiatan->getDataKegiatan($slug)
         ]);
     }
+    public function buatkegiatan()
+    {
+        if (logged_in()) {
+            return view('pages/admin/buatkegiatan', [
+                'title' => 'Buat Kegiatan'
+            ]);
+        } else {
+            redirect('/login');
+        }
+        
+    }
 }
