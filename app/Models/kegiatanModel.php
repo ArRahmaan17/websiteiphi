@@ -13,7 +13,7 @@ class KegiatanModel extends Model
 
   protected $returnType     = 'array';
 
-  protected $allowedFields = ['judul', 'isi', 'foto'];
+  protected $allowedFields = ['judul', 'isi', 'foto', 'video'];
 
   public function getDataKegiatan($slug = false)
   {

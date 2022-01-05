@@ -12,6 +12,7 @@ class Kegiatan extends BaseController
     }
     public function index()
     {
+        $pager = \Config\Services::pager();
         $keyword = $this->request->getVar('keyword');
         if ($keyword) {
             $kegiatan = $this->Kegiatan->search($keyword);
@@ -20,7 +21,7 @@ class Kegiatan extends BaseController
         }
         return view('pages/kegiatan', [
             'title' => 'Kegiatan',
-            'data' => $kegiatan->getDataKegiatan()
+            'data' => $kegiatan->paginate(6, 'kegiatan')
         ]);
     }
     public function kegiatan($slug)
@@ -29,16 +30,5 @@ class Kegiatan extends BaseController
             'title' => 'Detail Kegiatan',
             'data' => $this->Kegiatan->getDataKegiatan($slug)
         ]);
-    }
-    public function buatkegiatan()
-    {
-        if (logged_in()) {
-            return view('pages/admin/buatkegiatan', [
-                'title' => 'Buat Kegiatan'
-            ]);
-        } else {
-            redirect('/login');
-        }
-        
     }
 }

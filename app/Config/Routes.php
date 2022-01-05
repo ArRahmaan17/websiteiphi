@@ -35,11 +35,11 @@ $routes->get('/', 'Home::index');
 $routes->get('/pengurus', 'Kegiatan::pengurus');
 $routes->get('kegiatan/(:any)', 'Kegiatan::kegiatan/$1');
 $routes->get('kegiatan/', 'Kegiatan::index');
-$routes->get('/admin/buatkegiatan', 'admin/Kegiatan::buatkegiatan');
-$routes->get('/admin/perbaruikegiatan', 'admin/Kegiatan::perbaruikegiatan');
-$routes->get('/admin/kegiatan/(:any)', 'admin/Kegiatan::kegiatan/$1');
-$routes->get('/admin/kegiatan', 'admin/Kegiatan::index');
-$routes->get('/admin/pengurus', 'admin/Kegiatan::pengurus');
+$routes->get('admin/buatkegiatan', 'admin/Kegiatan::buatkegiatan');
+$routes->get('admin/perbaruikegiatan', 'admin/Kegiatan::perbaruikegiatan');
+$routes->get('admin/kegiatan/(:any)', 'admin/Kegiatan::detailkegiatan/$1');
+$routes->get('admin/kegiatan', 'admin/Kegiatan::index');
+$routes->get('admin/pengurus', 'admin/Kegiatan::pengurus');
 
 
 /*

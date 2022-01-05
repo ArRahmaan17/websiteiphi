@@ -10,8 +10,7 @@
         <iframe width="560" height="315" src="<?= $data['video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="card-body">
-        <p class="h3 text-light">Diposting Oleh: <?= $data['penulis'] ?> </p>
-        <p class="h5 text-light">Terakhir Diupdate: <?= $data['updated_at'] ?></p>
+        <p class="h6 text-light">Terakhir Diupdate: <?= $data['updated_at'] ?> Oleh: <?= $data['penulis'] ?> </p>
         <p class="card-text text-light"><?= $data['isi'] ?></p>
       </div>
     </div>

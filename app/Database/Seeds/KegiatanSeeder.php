@@ -36,7 +36,7 @@ class KegiatanSeeder extends Seeder
         'excerpt' => '',
         'foto' => 'default.webp',
         'video' => $faker->youtubeEmbedUri(),
-        'penulis' => $faker->name(),
+        'penulis' => 'Rahmaan17',
         'created_at' => Time::createFromTimestamp($faker->unixTime()),
         'updated_at' => Time::now()
       ];
