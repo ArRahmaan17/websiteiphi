@@ -1,10 +1,10 @@
 <?= $this->extend('/layouts/templates'); ?>
 <?= $this->section('content'); ?>
-<div class="container-xxl">
+<div class="container-xxl mt-5">
   <!-- acara panti -->
   <div id="acara" class="row p-4">
     <div class="col-xl-12">
-      <p class="h1 text-light d-inline">Acara IPHI</p>
+      <p class="h1 d-inline" data-aos="fade-up" data-aos-delay="100">Acara IPHI</p>
       <div class="d-flex justify-content-end">
         <form action="" class="m-1" method="post">
           <div class="input-group" data-aos="fade-up" data-aos-delay="100">
@@ -20,16 +20,18 @@
     </div>
     <?php foreach ($data as $k) : ?>
       <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
-        <div class="card">
-          <img src="<?= base_url() ?>/img/<?= $k['foto'] ?>" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
+        <div class="card shadow">
+          <img src="/img/<?= $k['foto'] ?>" class="card-img-top">
           <div class="card-body">
-            <p class="card-title h5"><?= $k['judul'] ?></p>
+            <p class="card-title text-capitalize h5">Kegiatan <?= $k['judul'] ?></p>
             <p class="card-text"><?= $k['excerpt'] ?></p>
-            <a href="/kegiatan/<?= $k['slug'] ?>" class="btn btn-light">Detail <?= $k['judul'] ?></a>
+            <a href="/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success text-capitalize">Detail Kegiatan <?= $k['judul'] ?></a>
           </div>
         </div>
       </div>
     <?php endforeach ?>
-    <!-- end acara panti -->
+    <?= $pager->links('kegiatan', 'custome_pager') ?>
   </div>
-  <?= $this->endSection(); ?>
+  <!-- end acara panti -->
+</div>
+<?= $this->endSection(); ?>

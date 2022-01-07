@@ -26,7 +26,7 @@
           <div class="card-body">
             <p class="card-title text-capitalize h5">Kegiatan <?= $k['judul'] ?></p>
             <p class="card-text"><?= $k['excerpt'] ?></p>
-            <a href="/admin/kegiatan/<?= $k['slug'] ?>" class="btn btn-success text-capitalize">Detail Kegiatan <?= $k['judul'] ?></a>
+            <a href="/admin/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success text-capitalize">Detail Kegiatan <?= $k['judul'] ?></a>
           </div>
         </div>
       </div>

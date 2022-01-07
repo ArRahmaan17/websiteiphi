@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Kegiatan');
+$routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -31,15 +31,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->get('/admin/detailkegiatan/(:segment)', 'AdminKegiatan::detailkegiatan/$i');
+$routes->get('/admin/semuakegiatan', 'AdminKegiatan::index');
+$routes->get('/admin/buatkegiatan', 'AdminKegiatan::buatkegiatan');
+$routes->get('/admin/perbaruikegiatan', 'AdminKegiatan::perbaruikegiatan');
 $routes->get('/', 'Home::index');
+$routes->get('/semuakegiatan', 'Kegiatan::index');
 $routes->get('/pengurus', 'Kegiatan::pengurus');
-$routes->get('kegiatan/(:any)', 'Kegiatan::kegiatan/$1');
-$routes->get('kegiatan/', 'Kegiatan::index');
-$routes->get('admin/buatkegiatan', 'admin/Kegiatan::buatkegiatan');
-$routes->get('admin/perbaruikegiatan', 'admin/Kegiatan::perbaruikegiatan');
-$routes->get('admin/kegiatan/(:any)', 'admin/Kegiatan::detailkegiatan/$1');
-$routes->get('admin/kegiatan', 'admin/Kegiatan::index');
-$routes->get('admin/pengurus', 'admin/Kegiatan::pengurus');
+$routes->get('/detailkegiatan/(:segment)', 'Kegiatan::detailkegiatan/$i');
 
 
 /*

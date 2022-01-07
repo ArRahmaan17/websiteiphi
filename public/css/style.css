@@ -8,6 +8,9 @@ body{
   font-family: 'roboto', sans-serif;
   color:rgb(242, 232, 207);
 }
+#kampanye{
+  height: 100vh;
+}
 .card{
   background-color: rgb(56, 102, 65);
   border-radius: 15px;
@@ -29,6 +32,6 @@ nav>ul.pagination>li>a:hover {
   background-color: rgb(41, 112, 69);
   border: 1px solid rgb(106, 153, 78);
 }
-p, a{
-  color:rgb(242, 232, 207);
+p,li>a, .text-light{
+  color:rgb(242, 232, 207) !important;
 }

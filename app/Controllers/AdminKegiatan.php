@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\I18n\Time;
 use App\Models\KegiatanModel;
 
-class Kegiatan extends BaseController
+class AdminKegiatan extends BaseController
 {
   public function __construct()
   {
@@ -20,21 +20,22 @@ class Kegiatan extends BaseController
     } else {
       $kegiatan = $this->Kegiatan;
     }
-    return view('pages/admin/kegiatan', [
+    return view('pages/Admin/kegiatan', [
       'title' => 'Data Kegiatan',
       'data' => $kegiatan->paginate(6, 'kegiatan'),
       'pager' => $this->Kegiatan->pager
     ]);
   }
-  public function perbaruikegiatan()
+  public function perbaruikegiatan($slug)
   {
-    return view('pages/admin/perbaruikegiatan', [
-      'title' => 'Perbarui Kegiatan'
+    return view('pages/Admin/perbaruikegiatan', [
+      'title' => 'Perbarui Kegiatan',
+      'data' => $this->Kegiatan->getDataKegiatan($slug)
     ]);
   }
   public function detailkegiatan($slug)
   {
-    return view('pages/admin/detailkegiatan', [
+    return view('pages/Admin/detailkegiatan', [
       'title' => 'Kegiatan',
       'data' => $this->Kegiatan->getDataKegiatan($slug)
     ]);
@@ -42,7 +43,7 @@ class Kegiatan extends BaseController
   public function buatkegiatan()
   {
     if (logged_in()) {
-      return view('pages/admin/buatkegiatan', [
+      return view('pages/Admin/buatkegiatan', [
         'title' => 'Buat Kegiatan',
         'validation' => \Config\Services::validation()
       ]);

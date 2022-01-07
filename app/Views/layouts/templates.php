@@ -23,27 +23,27 @@
         <?php if (logged_in()) : ?>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link fw-bold text-center" data-aos="fade-down" href="admin/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-center" data-aos="fade-down" href="admin/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/semuakegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-center" data-aos="fade-down" href="admin/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/logout" title="Pengurus IPHI">Logout</a>
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/logout" title="Pengurus IPHI">Logout</a>
             </li>
           <?php else : ?>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/tamanindah" title="Daftar Taman Indah">Taman Indah</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/kegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/semuakegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-bold text-center" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
+                <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/pengurus" title="Pengurus IPHI">Pengurus IPHI</a>
               </li>
             </ul>
           <?php endif ?>
@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4">
           <div class="lembaga d-flex">
-            <img class="img-thumbnail bg-dark rounded-circle" width="40" height="40" src="<?= base_url() ?>/img/logo.webp">
+            <img class="img-thumbnail bg-dark rounded-circle" width="40" height="30" src="<?= base_url() ?>/img/logo.webp">
             <h3 class="lead m-2">IPHI Kabupaten Karanganyar</h3>
           </div>
           <div class="m-2">

@@ -21,10 +21,11 @@ class Kegiatan extends BaseController
         }
         return view('pages/kegiatan', [
             'title' => 'Kegiatan',
-            'data' => $kegiatan->paginate(6, 'kegiatan')
+            'data' => $kegiatan->paginate(6, 'kegiatan'),
+            'pager' => $kegiatan->pager
         ]);
     }
-    public function kegiatan($slug)
+    public function detailkegiatan($slug)
     {
         return view('pages/detailkegiatan', [
             'title' => 'Detail Kegiatan',
