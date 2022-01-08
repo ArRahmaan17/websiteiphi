@@ -41,7 +41,7 @@
             <div class="card-body">
               <p class="card-title h5"><?= $k['judul'] ?></p>
               <p class="card-text"><?= $k['excerpt'] ?></p>
-              <a href="/kegiatan/<?= $k['slug'] ?>" class="btn btn-success">Detail Kegiatan <?= $k['judul'] ?></a>
+              <a href="/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success">Detail Kegiatan <?= $k['judul'] ?></a>
             </div>
           </div>
         </div>

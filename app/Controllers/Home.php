@@ -22,4 +22,16 @@ class Home extends BaseController
       'pager' => $this->Kegiatan->pager
     ]);
   }
+  public function pengurus()
+  {
+    return view('errors/html/featureunderdevelopment', [
+      'title' => 'feature under development'
+    ]);
+  }
+  public function tamanislam()
+  {
+    return view('errors/html/featureunderdevelopment', [
+      'title' => 'feature under development'
+    ]);
+  }
 }

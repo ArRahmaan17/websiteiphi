@@ -26,7 +26,6 @@ class KegiatanModel extends Model
 
   public function search($keyword)
   {
-    return $this->table('kegiatan')->like('judul', $keyword);
-    // return $this->table('kegiatan')->like('judul', $keyword)->orLike('isi', $keyword)->orLike('excerpt', $keyword);
+    return $this->table('kegiatan')->like('judul', $keyword)->orLike('isi', $keyword)->orLike('excerpt', $keyword);
   }
 }

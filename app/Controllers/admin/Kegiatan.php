@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use CodeIgniter\I18n\Time;
 use App\Models\KegiatanModel;
 
-class AdminKegiatan extends BaseController
+class Kegiatan extends BaseController
 {
   public function __construct()
   {
@@ -42,14 +42,10 @@ class AdminKegiatan extends BaseController
   }
   public function buatkegiatan()
   {
-    if (logged_in()) {
-      return view('pages/Admin/buatkegiatan', [
-        'title' => 'Buat Kegiatan',
-        'validation' => \Config\Services::validation()
-      ]);
-    } else {
-      redirect('/login');
-    }
+    return view('pages/Admin/buatkegiatan', [
+      'title' => 'Buat Kegiatan',
+      'validation' => \Config\Services::validation()
+    ]);
   }
   public function savekegiatan()
   {

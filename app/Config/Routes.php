@@ -31,14 +31,15 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/admin/detailkegiatan/(:segment)', 'AdminKegiatan::detailkegiatan/$i');
-$routes->get('/admin/semuakegiatan', 'AdminKegiatan::index');
-$routes->get('/admin/buatkegiatan', 'AdminKegiatan::buatkegiatan');
-$routes->get('/admin/perbaruikegiatan', 'AdminKegiatan::perbaruikegiatan');
+$routes->get('admin/detailkegiatan/(:any)', 'admin\kegiatan::detailkegiatan/$1');
+$routes->get('admin/perbaruikegiatan/(:any)', 'admin\kegiatan::perbaruikegiatan/$1');
+$routes->get('admin/semuakegiatan', 'admin\kegiatan::index');
+$routes->get('admin/buatkegiatan', 'admin\kegiatan::buatkegiatan');
 $routes->get('/', 'Home::index');
-$routes->get('/semuakegiatan', 'Kegiatan::index');
-$routes->get('/pengurus', 'Kegiatan::pengurus');
-$routes->get('/detailkegiatan/(:segment)', 'Kegiatan::detailkegiatan/$i');
+$routes->get('/semuakegiatan', 'kegiatan::index');
+$routes->get('/pengurus', 'Home::pengurus');
+$routes->get('/tamanislam', 'Home::tamanislam');
+$routes->get('/detailkegiatan/(:segment)', 'kegiatan::detailkegiatan/$1');
 
 
 /*
