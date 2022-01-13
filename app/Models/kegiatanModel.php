@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Model;
 
 class KegiatanModel extends Model
@@ -15,10 +16,12 @@ class KegiatanModel extends Model
 
   protected $allowedFields = ['judul', 'isi', 'foto', 'video'];
 
-  public function getDataKegiatan($slug = false)
+  public function getDataKegiatan(string $slug = 'false', int $id = null)
   {
-    if ($slug == false) {
+    if ($slug == 'false') {
       return $this->findAll();
+    } elseif (!empty($id)) {
+      return $this->where(['id' => $id])->first();
     } else {
       return $this->where(['slug' => $slug])->first();
     }

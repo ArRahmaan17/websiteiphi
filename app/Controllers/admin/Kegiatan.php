@@ -102,4 +102,68 @@ class Kegiatan extends BaseController
       d(Time::now());
     }
   }
+  public function update($id)
+  {
+    $judullama = $this->Kegiatan->getDataKegiatan($this->request->getVar('slug'));
+    $videolama = $this->Kegiatan->getDataKegiatan($this->request->getVar('slug'));
+    if ($judullama == $this->request->getVar('judul') || $videolama == $this->request->getVar('video')) {
+      $rule_judul = 'required|is_unique[kegiatan.judul]|max_length[100]';
+      $rule_youtube = 'required|is_unique[kegiatan.judul]';
+    } else {
+      $rule_judul = 'is_unique[kegiatan.judul]|max_length[100]';
+      $rule_youtube = 'is_unique[kegiatan.video]';
+    }
+    if (!$this->validate([
+      'judul' => [
+        'rules' => $rule_judul,
+        'errors' => [
+          'required' => '{field} tolong harus di isi',
+          'is_unique' => '{field} sudah pernah digunakan',
+          'max_length' => '{field} Panjang karakter melebihi batas'
+        ]
+      ],
+      'isi' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => '{field} harus di isi'
+        ]
+      ],
+      'youtube' => [
+        'rules' => $rule_youtube,
+        'errors' => [
+          'required' => '{field} youtube harus di isi',
+          'is_unique' => '{field} youtube tidak boleh sama'
+        ]
+      ],
+      'foto' => [
+        'rules' => 'max_size[foto,2048]|is_image[foto]|mime_in[foto,image/png,image/jpg,image/jpeg]',
+        'errors' => [
+          'max_size' => 'Ukuran {field} melebihi 2 Mega',
+          'mime_in' => 'Tolong masukan {field}',
+          'is_image' => 'Tolong upload {field}, jangan yang lain !!!'
+        ]
+      ]
+    ])) {
+      return redirect()->to('admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
+    } else {
+      $filefoto = $this->request->getFile('foto');
+      if ($filefoto == $this->request->getVar('fotolama')) {
+        $namafoto = $this->request->getVar('fotolama');
+      } else {
+        $namafoto = $filefoto->getRandomName();
+        $filefoto->move('img', $namafoto);
+      }
+      $isi = $this->request->getVar('isi');
+      $this->Kegiatan->save([
+        'id' => $id,
+        'judul' => $this->request->getVar('judul'),
+        'slug' => $this->request->getVar('slug'),
+        'isi' => $isi,
+        'excerpt' => word_limiter($isi, 20, '$#8230;'),
+        'foto' => $this->request->getFile('foto'),
+        'video' => $this->request->getVar('video'),
+        'penulis' => user()->getUsername(),
+      ]);
+    }
+  }
 }

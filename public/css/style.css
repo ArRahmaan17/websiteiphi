@@ -38,3 +38,6 @@ nav>ul.pagination>li>a:hover {
 p,li>a, .text-light{
   color:rgb(242, 232, 207) !important;
 }
+iframe.container{
+  min-height: 300px;
+}

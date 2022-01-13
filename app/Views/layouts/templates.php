@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="<?= base_url() ?>/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="<?= base_url() ?>/css/style.css">
@@ -81,7 +81,7 @@
           <div class="Lokasi nav-link">
             <ul class="list-unstyled medium">
               <li>
-                <iframe class="container-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118432.92532745835!2d110.93216411555852!3d-7.516030946504911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a2276223d2c0d%3A0xd03b1bd7e66b8565!2sIphi%20Kab%20Karanganyar!5e0!3m2!1sid!2sid!4v1640320250119!5m2!1sid!2sid" height="200px" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118432.92532745835!2d110.93216411555852!3d-7.516030946504911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a2276223d2c0d%3A0xd03b1bd7e66b8565!2sIphi%20Kab%20Karanganyar!5e0!3m2!1sid!2sid!4v1640320250119!5m2!1sid!2sid" height="200px" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
               </li>
             </ul>
           </div>
@@ -126,8 +126,8 @@
       </div>
     </div>
     <!-- end Footer -->
-    <?= $this->renderSection('script'); ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="<?= base_url() ?>/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>/js/popper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

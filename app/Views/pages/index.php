@@ -33,11 +33,11 @@
   <div class="container-fluid">
     <!-- acara -->
     <div id="acara" class="row mt-2">
-      <p class="h1" data-aos="fade-down" data-aos-delay="100">Acara IPHI</p>
+      <p class="h1" data-aos="fade-down">Acara IPHI</p>
       <?php foreach ($kegiatan as $k) : ?>
-        <div class="col-xl-4 mb-3" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-4 mb-3" data-aos="fade-up">
           <div class="card shadow">
-            <img src="<?= base_url() ?>/img/<?= $k['foto'] ?>" data-aos="fade-up" data-aos-delay="200" class="card-img-top">
+            <img src="<?= base_url() ?>/img/<?= $k['foto'] ?>" data-aos="fade-up" class="card-img-top">
             <div class="card-body">
               <p class="card-title h5"><?= $k['judul'] ?></p>
               <p class="card-text"><?= $k['excerpt'] ?></p>
@@ -50,7 +50,7 @@
     <!-- endacara -->
     <hr>
     <!-- Gallery -->
-    <div id="gallery" class="row" data-aos="ease-in" data-aos-delay="500">
+    <div id="gallery" class="row" data-aos="fade-up" data-aos-delay="500">
       <p class="h1">OUR GALLERY</p>
       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
         <img src="<?= base_url() ?>/img/gallery1.JPG" class="w-100 shadow rounded mb-4" />
