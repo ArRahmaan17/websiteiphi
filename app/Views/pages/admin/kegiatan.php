@@ -5,6 +5,16 @@
   <div id="acara" class="row p-4">
     <div class="col-xl-12">
       <p class="h1 d-inline" data-aos="fade-up" data-aos-delay="100">Acara IPHI</p>
+      <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+          <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+          </svg>
+          <div>
+            <?= session()->getFlashdata('pesan'); ?>
+          </div>
+        </div>
+      <?php endif ?>
       <div class="d-flex justify-content-end">
         <form action="" class="m-1" method="post">
           <div class="input-group" data-aos="fade-up" data-aos-delay="100">

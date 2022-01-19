@@ -30,6 +30,7 @@ class Kegiatan extends BaseController
   {
     return view('pages/Admin/perbaruikegiatan', [
       'title' => 'Perbarui Kegiatan',
+      'validation' => \Config\Services::validation(),
       'data' => $this->Kegiatan->getDataKegiatan($slug)
     ]);
   }
@@ -144,7 +145,7 @@ class Kegiatan extends BaseController
         ]
       ]
     ])) {
-      return redirect()->to('admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
+      return redirect()->to('/admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
     } else {
       $filefoto = $this->request->getFile('foto');
       if ($filefoto == $this->request->getVar('fotolama')) {
@@ -157,13 +158,15 @@ class Kegiatan extends BaseController
       $this->Kegiatan->save([
         'id' => $id,
         'judul' => $this->request->getVar('judul'),
-        'slug' => $this->request->getVar('slug'),
+        'slug' => url_title($this->request->getVar('judul')),
         'isi' => $isi,
         'excerpt' => word_limiter($isi, 20, '$#8230;'),
         'foto' => $this->request->getFile('foto'),
         'video' => $this->request->getVar('video'),
         'penulis' => user()->getUsername(),
       ]);
+      session()->setFlashdata('pesan', 'Data Berhasil diudah');
+      return redirect()->to('/admin/semuakegiatan');
     }
   }
 }
