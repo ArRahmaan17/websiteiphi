@@ -145,7 +145,7 @@ class Kegiatan extends BaseController
         ]
       ]
     ])) {
-      return redirect()->to('/admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
+      return redirect()->to('admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
     } else {
       $filefoto = $this->request->getFile('foto');
       if ($filefoto == $this->request->getVar('fotolama')) {

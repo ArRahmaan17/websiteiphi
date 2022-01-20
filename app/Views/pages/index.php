@@ -41,7 +41,11 @@
             <div class="card-body">
               <p class="card-title h5"><?= $k['judul'] ?></p>
               <p class="card-text"><?= $k['excerpt'] ?></p>
-              <a href="/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success">Detail Kegiatan <?= $k['judul'] ?></a>
+              <?php if (logged_in()) : ?>
+                <a href="/admin/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success">Detail Kegiatan <?= $k['judul'] ?></a>
+              <?php else : ?>
+                <a href="/detailkegiatan/<?= $k['slug'] ?>" class="btn btn-success">Detail Kegiatan <?= $k['judul'] ?></a>
+              <?php endif ?>
             </div>
           </div>
         </div>

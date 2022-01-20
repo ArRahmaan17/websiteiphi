@@ -5,8 +5,9 @@
     <div class="col-xl-10 mb-5">
       <form autocomplete="off" enctype="multipart/form-data" action="/admin/kegiatan/update/<?= $data['id'] ?>" method="POST">
         <? csrf_field() ?>
-        <input type="text" value="<?= $data['id'] ?>">
-        <input type="text" value="<?= $data['foto'] ?>">
+        <input type="text" name="id" value="<?= $data['id'] ?>">
+        <input type="text" name="foto" value="<?= $data['foto'] ?>">
+        <input type="text" name="slug" value="<?= $data['slug'] ?>">
         <div class="row mb-3">
           <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Judul Kegiatan</label>
           <div class="col-sm-12">
