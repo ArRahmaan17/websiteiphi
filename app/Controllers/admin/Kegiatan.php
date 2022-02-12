@@ -11,6 +11,7 @@ class Kegiatan extends BaseController
   public function __construct()
   {
     $this->Kegiatan = new KegiatanModel();
+    helper('text');
   }
   public function index()
   {
@@ -52,11 +53,10 @@ class Kegiatan extends BaseController
   {
     if (!$this->validate([
       'judul' => [
-        'rules' => 'required|is_unique[kegiatan.judul]|max_length[100]',
+        'rules' => 'required|is_unique[kegiatan.judul]',
         'errors' => [
-          'required' => '{field} tolong harus di isi',
-          'is_unique' => '{field} sudah pernah digunakan',
-          'max_length' => '{field} Panjang karakter melebihi batas'
+          'required' => '{field} youtube harus di isi',
+          'is_unique' => '{field} youtube tidak boleh sama',
         ]
       ],
       'isi' => [
@@ -68,8 +68,8 @@ class Kegiatan extends BaseController
       'youtube' => [
         'rules' => 'required|is_unique[kegiatan.video]',
         'errors' => [
-          'required' => '{field} youtube harus di isi',
-          'is_unique' => '{field} youtube tidak boleh sama'
+          'required' => 'Link {field} harus di isi',
+          'is_unique' => 'Link {field} tidak boleh sama'
         ]
       ],
       'foto' => [
@@ -81,14 +81,14 @@ class Kegiatan extends BaseController
         ]
       ]
     ])) {
-      return redirect()->to('admin/buatkegiatan')->withInput();
+      return redirect()->to(base_url('/admin/buatkegiatan/'))->withInput();
     } else {
       $filefoto = $this->request->getFile('foto');
       if ($filefoto->getError() == 4) {
         $namafoto = 'default.webp';
       } else {
         $namafoto = $filefoto->getRandomName();
-        $filefoto->move('img', $namafoto);
+        $filefoto->move('img/kegiatan/', $namafoto);
       }
       $isi = $this->request->getVar('isi');
       $judul = $this->request->getVar('judul');
@@ -97,23 +97,26 @@ class Kegiatan extends BaseController
         'slug' => url_title($judul, '-', true),
         'isi' => $isi,
         'excerpt' => word_limiter($isi, 10, '&#8230;'),
+        'foto' => $namafoto,
         'youtube' => $this->request->getVar('youtube'),
         'penulis' => user()->getUsername(),
       ]);
-      d(Time::now());
+      session()->setFlashdata('pesan', 'Data Berhasil diudah');
+      return redirect()->to('/admin/semuakegiatan');
     }
   }
   public function update($id)
   {
     $judullama = $this->Kegiatan->getDataKegiatan($this->request->getVar('slug'));
     $videolama = $this->Kegiatan->getDataKegiatan($this->request->getVar('slug'));
-    if ($judullama == $this->request->getVar('judul') || $videolama == $this->request->getVar('video')) {
+    if ($judullama['judul'] == $this->request->getVar('judul') && $videolama['video'] == $this->request->getVar('youtube')) {
       $rule_judul = 'required|is_unique[kegiatan.judul]|max_length[100]';
       $rule_youtube = 'required|is_unique[kegiatan.judul]';
     } else {
-      $rule_judul = 'is_unique[kegiatan.judul]|max_length[100]';
-      $rule_youtube = 'is_unique[kegiatan.video]';
+      $rule_judul = 'required|max_length[100]';
+      $rule_youtube = 'required';
     }
+    
     if (!$this->validate([
       'judul' => [
         'rules' => $rule_judul,
@@ -145,14 +148,15 @@ class Kegiatan extends BaseController
         ]
       ]
     ])) {
-      return redirect()->to('admin/perbaruikegiatan/' . $this->request->getVar('slug'))->withInput();
+      return redirect()->to(base_url('/admin/perbaruikegiatan/' . $this->request->getVar('slug')))->withInput();
     } else {
       $filefoto = $this->request->getFile('foto');
       if ($filefoto == $this->request->getVar('fotolama')) {
         $namafoto = $this->request->getVar('fotolama');
       } else {
-        $namafoto = $filefoto->getRandomName();
-        $filefoto->move('img', $namafoto);
+        $namafoto = $filefoto->getBasename();
+        dd($namafoto);
+        $filefoto->move('img/kegiatan/', $namafoto);
       }
       $isi = $this->request->getVar('isi');
       $this->Kegiatan->save([
@@ -161,8 +165,8 @@ class Kegiatan extends BaseController
         'slug' => url_title($this->request->getVar('judul')),
         'isi' => $isi,
         'excerpt' => word_limiter($isi, 20, '$#8230;'),
-        'foto' => $this->request->getFile('foto'),
-        'video' => $this->request->getVar('video'),
+        'foto' => $namafoto,
+        'video' => $this->request->getVar('youtube'),
         'penulis' => user()->getUsername(),
       ]);
       session()->setFlashdata('pesan', 'Data Berhasil diudah');

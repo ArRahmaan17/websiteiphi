@@ -23,7 +23,7 @@
         <?php if (logged_in()) : ?>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/tamanislam" title="Daftar Taman Indah">Taman Indah</a>
+              <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/tamanislam" title="Daftar Taman Islam">Taman Islam</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-center text-light" data-aos="fade-down" href="/admin/semuakegiatan" title="Kegiatan IPHI">Kegiatan IPHI</a>

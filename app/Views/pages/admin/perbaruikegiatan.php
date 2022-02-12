@@ -5,61 +5,54 @@
     <div class="col-xl-10 mb-5">
       <form autocomplete="off" enctype="multipart/form-data" action="/admin/kegiatan/update/<?= $data['id'] ?>" method="POST">
         <? csrf_field() ?>
-        <input type="text" name="id" value="<?= $data['id'] ?>">
-        <input type="text" name="foto" value="<?= $data['foto'] ?>">
         <input type="text" name="slug" value="<?= $data['slug'] ?>">
-        <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Judul Kegiatan</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" value="<?= $data['judul'] ?>" name="judul" id="inputEmail3">
-            <div id="validationServerUsernameFeedback" data-aos='fade-down' data-aos-delay="600" class="invalid-feedback text-capitalize fw-bold text-sm-center">
-              <?= $validation->getError('judul'); ?>
-            </div>
+        <input type="text" name="fotolama" value="<?= $data['foto'] ?>">
+        <div class="mb-3">
+          <label for="judul" class="form-label text-light">Judul Kegiatan</label>
+          <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" autofocus id="judul" value="<?= (old('judul')) ? old('judul') : $data['judul'] ?>" name="judul">
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <?= $validation->getError('judul'); ?>
           </div>
         </div>
-        <div class="row mb-3">
-          <label for="inputEmail3" class="col-sm-2 col-form-label fw-bold">Link Youtube Kegiatan</label>
-          <div class="col-sm-12">
-            <input type="text" class="form-control <?= ($validation->hasError('video')) ? 'is-invalid' : ''; ?>" value="<?= $data['video'] ?>" name="video" id="inputEmail3">
-            <div id="validationServerUsernameFeedback" data-aos='fade-down' data-aos-delay="600" class="invalid-feedback text-capitalize fw-bold text-sm-center">
-              <?= $validation->getError('video'); ?>
-            </div>
+        <div class="mb-3">
+          <label for="youtube" class="form-label text-light">Link Youtube Kegiatan</label>
+          <input type="text" class="form-control <?= ($validation->hasError('youtube')) ? 'is-invalid' : ''; ?>" id="youtube" value="<?= (old('youtube')) ? old('youtube') : $data['video'] ?>" name="youtube">
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <?= $validation->getError('youtube'); ?>
           </div>
         </div>
-        <div class="row mb-3">
-          <label for="inputPassword3" class="col-sm-2 col-form-label fw-bold">Foto Thumbnails : <?= $data['foto'] ?></label>
-          <div class="col-sm-12">
-            <input type="file" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : ''; ?>" value="<?= $data['foto'] ?>" name="foto" id="inputPassword3">
-            <div id="validationServerUsernameFeedback" data-aos='fade-down' data-aos-delay="600" class="invalid-feedback text-capitalize fw-bold text-sm-center">
-              <?= $validation->getError('foto'); ?>
-            </div>
+        <div class="mb-3">
+          <label for="isi" class="form-label text-light">Isi Kegiatan</label>
+          <textarea class="form-control <?= ($validation->hasError('isi')) ? 'is-invalid' : ''; ?>" name="isi" id="isi" style="height: 300px"><?= (old('isi')) ? old('isi') : $data['isi'] ?></textarea>
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <?= $validation->getError('isi'); ?>.
           </div>
         </div>
-        <div class="row mb-3">
-          <label for="isikegiatan" class="form-label fw-bold">Isi Kegiatan</label>
-          <div class="col-sm-12">
-            <textarea class="form-control text-dark <?= ($validation->hasError('isi')) ? 'is-invalid' : ''; ?>" name="isi" id="isikegiatan"><?= $data['isi'] ?></textarea>
-            <div id="validationServerUsernameFeedback" data-aos='fade-down' data-aos-delay="600" class="invalid-feedback text-capitalize fw-bold text-sm-center">
-              <?= $validation->getError('isi'); ?>
-            </div>
+        <div class="mb-3">
+          <label for="foto" class="form-label text-light">Foto thumbnails : <?= (old('foto')) ? old('foto') : $data['foto'] ?> </label>
+          <input class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : ''; ?>" name="foto" type="file" id="foto" value="<?= (old('foto')) ? old('foto') : $data['foto'] ?>">
+          <div id=" validationServerUsernameFeedback" class="invalid-feedback">
+            <?= $validation->getError('foto'); ?>
           </div>
         </div>
-        <div class="d-grid gap-2">
-          <button type="submit" class="btn btn-light">Perbarui Data</button>
-        </div>
+        <button type="submit" class="btn btn-primary">Update Post</button>
       </form>
     </div>
   </div>
 </div>
 <?= $this->endSection(); ?>
 <?= $this->section('script'); ?>
-<script src="https://cdn.ckeditor.com/ckeditor5/31.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/balloon-block/ckeditor.js"></script>
 <style>
   .ck-editor__editable_inline {
     min-height: 50vh;
   }
 </style>
 <script>
-  ClassicEditor.create(document.querySelector('#isikegiatan'));
+  BalloonEditor
+    .create(document.querySelector('#isi'))
+    .catch(error => {
+      console.error(error);
+    });
 </script>
-<?= $this->endSection(); ?>
+<!-- <?= $this->endSection(); ?> -->

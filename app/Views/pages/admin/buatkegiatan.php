@@ -9,8 +9,8 @@
         <div class="row mb-1">
           <label for="judul" class="col-sm-2 col-form-label text-white">Judul Kegiatan</label>
           <div class="col-sm-12">
-            <input type="text" autofocus class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" value="<?= old('judul') ?> " name="judul" id="judul">
-            <div id="validationServerUsernameFeedback" data-aos='fade-down' data-aos-delay="600" class="invalid-feedback text-capitalize fw-bold text-sm-center">
+            <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" value="<?= old('judul') ?>" name="judul" id="judul">
+            <div id="validationServerUsernameFeedback" class="invalid-feedback text-capitalize fw-bold text-sm-center">
               <?= $validation->getError('judul'); ?>
             </div>
           </div>
